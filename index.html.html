@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מסלול משפחתי בקליפורניה, וגאס ופארקים לאומיים</title>
+    <style>
+        :root {
+            --primary: #2b7a78;
+            --primary-dark: #17252a;
+            --secondary: #3aafa9;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --accent-orange: #fe5f55;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main-header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .main-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        .main-header p {
+            margin: 5px 0;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .part-header {
+            background-color: #def2f1;
+            color: var(--primary-dark);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            border-right: 5px solid var(--primary);
+        }
+
+        .day-card {
+            background-color: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .day-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+        }
+
+        .day-header .date {
+            background-color: #edf2f7;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .tag-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .tag.drive { background-color: #e2e8f0; color: #2d3748; }
+        .tag.stay { background-color: #feebc8; color: #7b341e; }
+        .tag.food { background-color: #fed7d7; color: #9b2c2c; }
+        .tag.hike { background-color: #c6f6d5; color: #22543d; }
+
+        .section-title {
+            font-weight: bold;
+            margin: 12px 0 6px 0;
+            color: #2d3748;
+        }
+
+        ul {
+            margin: 0;
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary);
+            color: white !important;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .map-btn:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="main-header">
+        <h1>🗺️ המסלול המשפחתי: חופים, פארקים, וגאס וטבע</h1>
+        <p>תאריכים: 17 בספטמבר – 5 באוקטובר | 5 נפשות</p>
+    </div>
+
+    <!-- חלק א' -->
+    <div class="part-header">🚗 חלק א': הנחיתה והתאקלמות בחוף (17.9 – 20.9)</div>
+
+    <!-- יום 1 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 1: נחיתה ב-LAX ונסיעה לסנטה ברברה</h2>
+            <span class="date">17.9 (יום ד')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כשעתיים וחצי נסיעה</span>
+                <span class="tag stay">🏨 Best Western Plus Santa Barbara</span>
+                <span class="tag food">🍕 The Funk Zone</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>בוקר:</strong> נחיתה ב-LAX (06:00), איסוף מיני-ואן ב-Alamo ויציאה צפונה על ה-101.</li>
+                <li><strong>עצירת התרעננות בדרך:</strong> עצירה מומלצת ב-<em>Camarillo</em> (כ-45 דקות מהשדה) לקפה, שירותים נקיים ואוכל קל.</li>
+                <li><strong>אחה"צ בסנטה ברברה:</strong> צ'ק-אין במלון, הליכה ברציף Stearns Wharf ושיטוט במדרחוב State Street.</li>
+                <li><strong>ערב:</strong> ארוחת ערב ברובע ה-Funk Zone ליד הרציף (פיצות, טאקוס ואווירה נהדרת).</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Best+Western+Plus+Santa+Barbara" target="_blank" class="map-btn">🗺️ ניווט למלון בסנטה ברברה</a>
+                <a href="https://maps.google.com/?q=Stearns+Wharf+Santa+Barbara" target="_blank" class="map-btn">🗺️ ניווט ל-Stearns Wharf</a>
+                <a href="https://maps.google.com/?q=The+Funk+Zone+Santa+Barbara" target="_blank" class="map-btn">🗺️ ניווט ל-Funk Zone</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 2 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 2: סנטה ברברה למונטריי דרך כביש 1 (Big Sur)</h2>
+            <span class="date">18.9 (יום ה')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 יום נהיגה מלא (כ-5 שעות נטו)</span>
+                <span class="tag hike">🌊 Big Sur & פילי ים</span>
+                <span class="tag stay">🏡 Airbnb Del Rey Oaks</span>
+            </div>
+            <div class="section-title">📍 תחנות עצירה ומסלול:</div>
+            <ul>
+                <li><strong>08:30 – יציאה מסנטה ברברה:</strong> דרך מעבר ההרים San Marcos Pass (כביש 154).</li>
+                <li><strong>עצירה 1 – סולבנג (Solvang):</strong> עיירה דנית ציורית. מאפים ב-Olsen's Danish Bakery ותחנות רוח (אופציונלי לקצר ישירות לפילי הים).</li>
+                <li><strong>עצירה 2 – שמורת פילי הים (Elephant Seal Vista Point):</strong> מצפון לסן סימיון, תצפית מעץ על פילי הים (שירותים מסודרים ב-Cambria לפני השמורה).</li>
+                <li><strong>מקטע Big Sur:</strong> תצפית על מפל McWay Falls, שירותים והתרעננות ב-Big Sur Station, ותמונה קלאסית בגשר Bixby Creek Bridge.</li>
+                <li><strong>ערב:</strong> הגעה למונטריי והתמקמות בדירה (965 Portola Drive, Del Rey Oaks).</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Olsen%27s+Danish+Village+Bakery+Solvang" target="_blank" class="map-btn">🗺️ ניווט למאפייה בסולבנג</a>
+                <a href="https://maps.google.com/?q=Elephant+Seal+Vista+Point+San+Simeon" target="_blank" class="map-btn">🗺️ ניווט לפילי הים</a>
+                <a href="https://maps.google.com/?q=Bixby+Creek+Bridge" target="_blank" class="map-btn">🗺️ ניווט לגשר ביקסבי</a>
+                <a href="https://maps.google.com/?q=965+Portola+Drive,+Del+Rey+Oaks,+CA" target="_blank" class="map-btn">🗺️ ניווט לדירה במונטריי</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 3 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 3: מונטריי – שיט לווייתנים ודרך 17 המייל</h2>
+            <span class="date">19.9 (יום ו')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🐳 שיט לווייתנים</span>
+                <span class="tag drive">🚗 17-Mile Drive</span>
+                <span class="tag stay">🏡 מונטריי</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>09:00-13:30 – שיט לווייתנים:</strong> חברת Discovery Whale Watch מרציף Fisherman's Wharf (חניה ב-101 Washington St). <em>להצטייד במשהו נגד בחילה!</em></li>
+                <li><strong>צהריים:</strong> ארוחה קלה ברציף הדייגים או ב-Cannery Row מול אריות הים.</li>
+                <li><strong>אחה"צ:</strong> נסיעה פנורמית בדרך 17 המייל (17-Mile Drive), עצירה ב"ברוש הבודד" (The Lone Cypress) ותצפית גולשים.</li>
+                <li><strong>ערב:</strong> סיבוב גלריות ובתי קפה בעיירה Carmel-by-the-Sea.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Fisherman%27s+Wharf+Monterey" target="_blank" class="map-btn">🗺️ ניווט לרציף הדייגים</a>
+                <a href="https://maps.google.com/?q=The+Lone+Cypress+Pebble+Beach" target="_blank" class="map-btn">🗺️ ניווט ל-17 Mile Drive</a>
+                <a href="https://maps.google.com/?q=Carmel-by-the-Sea,+CA" target="_blank" class="map-btn">🗺️ ניווט לכרמל</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 4 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 4: ממונטריי לעיירה Three Rivers (שער הסקויה)</h2>
+            <span class="date">20.9 (יום ש')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כ-3.5 שעות נהיגה</span>
+                <span class="tag food">🛒 קניות ב-Target Visalia</span>
+                <span class="tag stay">🏡 Three Rivers Cabin</span>
+            </div>
+            <div class="section-title">📍 פירוט הנסיעה וההצטיידות:</div>
+            <ul>
+                <li><strong>מקטע א' – Casa de Fruta:</strong> עצירה על כביש 152. שוק פירות יבשים, מאפים, שירותים מעולים ורכבת קטנה לילדים.</li>
+                <li><strong>מקטע ב' – הצטיידות גדולה ב-Visalia:</strong> קנייה מרוכזת ב-Target ויסאליה לקראת ימי הטבע (מים, נשנושים, בשר למנגל בבקתה).</li>
+                <li><strong>מקטע ג' – Three Rivers:</strong> הגעה דרך אגם קאוויה, צ'ק-אין בבקתה (45274 Hammond Dr), ורביצה פסטורלית על גדות הנהר Kaweah לפנות ערב.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Casa+de+Fruta+Hollister+CA" target="_blank" class="map-btn">🗺️ ניווט ל-Casa de Fruta</a>
+                <a href="https://maps.google.com/?q=Target+Visalia+CA" target="_blank" class="map-btn">🗺️ ניווט ל-Target Visalia</a>
+                <a href="https://maps.google.com/?q=45274+Hammond+Drive,+Three+Rivers,+CA" target="_blank" class="map-btn">🗺️ ניווט לבקתה ב-Three Rivers</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ב' -->
+    <div class="part-header">🌲 חלק ב': פארק סקויה ומעבר ליוסמיטי (21.9)</div>
+
+    <!-- יום 5 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 5: ענקי הסקויה ונסיעה ליוסמיטי ווסט</h2>
+            <span class="date">21.9 (יום א')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🌲 עץ הגנרל שרמן & Moro Rock</span>
+                <span class="tag drive">🚗 כ-4 שעות נהיגה</span>
+                <span class="tag stay">🏡 Yosemite West Cabin</span>
+            </div>
+            <div class="section-title">📍 פירוט היום (זהירות דובים: להסתיר אוכל ומזוודות ברכב!):</div>
+            <ul>
+                <li><strong>08:30-12:30 – פארק סקויה:</strong>
+                    <ul>
+                        <li>טיפוס קצר ומעורר על <strong>Moro Rock</strong> (תצפית 360 מעלות).</li>
+                        <li>נסיעה עם הרכב דרך גזע העץ החלול <strong>Tunnel Log</strong>.</li>
+                        <li>ביקור בעץ הגדול בעולם <strong>General Sherman Tree</strong> והליכה קצרה ב-Congress Trail.</li>
+                    </ul>
+                </li>
+                <li><strong>12:45:</strong> פיקניק צהריים זריז ויציאה צפונה לכיוון פרסנו ואוקהרסט.</li>
+                <li><strong>הצטיידות בדרך:</strong> השלמת קניות ומוצרים טריים בסופרמרקט Vons / Raley's בעיירה Oakhurst.</li>
+                <li><strong>18:30-19:00:</strong> כניסה דרך השער הדרומי של יוסמיטי והגעה לדירה ב-Yosemite West (7255 Yosemite Park Way). ערב מנגל שקט.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=General+Sherman+Tree+Parking" target="_blank" class="map-btn">🗺️ ניווט לגנרל שרמן</a>
+                <a href="https://maps.google.com/?q=Vons+Oakhurst+CA" target="_blank" class="map-btn">🗺️ ניווט לסופר ב-Oakhurst</a>
+                <a href="https://maps.google.com/?q=7255+Yosemite+Park+Way,+Yosemite+West,+CA" target="_blank" class="map-btn">🗺️ ניווט לדירה ביוסמיטי ווסט</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ג' -->
+    <div class="part-header">⛰️ חלק ג': עמק יוסמיטי וגליישר פוינט (22.9 – 23.9)</div>
+
+    <!-- יום 6 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 6: עמק יוסמיטי (Yosemite Valley)</h2>
+            <span class="date">22.9 (יום ב')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🥾 Mist Trail & מפלים</span>
+                <span class="tag food">🍕 Curry Village</span>
+                <span class="tag stay">🏡 Yosemite West</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>07:30 – יציאה מוקדמת:</strong> עצירה ראשונה לתמונה המפורסמת ב-<strong>Tunnel View</strong> (אל קפיטן והף דום).</li>
+                <li><strong>08:30 – Bridalveil Fall:</strong> הליכת בוקר קצרה לבסיס המפל.</li>
+                <li><strong>09:30 – Mist Trail:</strong> חניה ב-Curry Village, שאטל לתחנה 16 והליכה יפהפייה עד Vernal Fall Footbridge.</li>
+                <li><strong>12:30:</strong> ארוחת צהריים, פיצה וגלידה ב-Curry Village.</li>
+                <li><strong>14:00:</strong> שבילי עץ רגועים ב-Cook's Meadow ותצפית על Lower Yosemite Fall.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Tunnel+View+Yosemite" target="_blank" class="map-btn">🗺️ ניווט ל-Tunnel View</a>
+                <a href="https://maps.google.com/?q=Curry+Village+Parking" target="_blank" class="map-btn">🗺️ ניווט ל-Curry Village</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 7 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 7: גליישר פוינט וכיפת הסלע Sentinel Dome</h2>
+            <span class="date">23.9 (יום ג')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">⛰️ Glacier Point & Sentinel Dome</span>
+                <span class="tag stay">🏡 Yosemite West</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>09:30 – Glacier Point:</strong> תצפית פנורמית דרמטית על כל עמק יוסמיטי ורכסי הגרניט.</li>
+                <li><strong>10:30 – מסלול Sentinel Dome:</strong> הליכה של 3.5 ק"מ וטיפוס על כיפת סלע ענקית עם נוף 360 מעלות.</li>
+                <li><strong>אחה"צ:</strong> רכיבה על אופניים בעמק או מנוחה משפחתית.</li>
+                <li><strong>🌌 בונוס לילה:</strong> נסיעה קצרה ל-Glacier Point לצפייה במיליוני כוכבים ושביל החלב.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Glacier+Point+Yosemite" target="_blank" class="map-btn">🗺️ ניווט ל-Glacier Point</a>
+                <a href="https://maps.google.com/?q=Sentinel+Dome+Trailhead" target="_blank" class="map-btn">🗺️ ניווט ל-Sentinel Dome</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ד' -->
+    <div class="part-header">🌋 חלק ד': מעבר טיוגה וממוט לייקס (24.9 – 25.9)</div>
+
+    <!-- יום 8 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 8: חציית מעבר טיוגה (Tioga Pass) וממוט לייקס</h2>
+            <span class="date">24.9 (יום ד')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כביש נופי הררי (כ-3 שעות)</span>
+                <span class="tag food">🌮 Whoa Nellie Deli</span>
+                <span class="tag stay">🏡 Mammoth Lakes (Old Mammoth Rd)</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>08:30 – כביש 120 (Tioga Road):</strong> חציית רכס הסיירה בגובה 3,000 מטר. עצירות ב-Olmsted Point, חוף החול של אגם Tenaya ומדשאות Tuolumne Meadows.</li>
+                <li><strong>צהריים ב-Whoa Nellie Deli (Lee Vining):</strong> מסעדת דרכים מפורסמת בתחנת הדלק מול אגם המונו (טאקוס דגים והמבורגרים).</li>
+                <li><strong>אחה"צ בממוט לייקס:</strong> סיבוב אגמים פסטורלי (Lake Mary & Lake George) וצ'ק-אין בדירה.</li>
+                <li><strong>ערב:</strong> ארוחת ערב משפחתית ב-Mammoth Brewing Company או Giovanni's Pizzeria.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Olmsted+Point" target="_blank" class="map-btn">🗺️ ניווט ל-Olmsted Point</a>
+                <a href="https://maps.google.com/?q=Whoa+Nellie+Deli+Lee+Vining" target="_blank" class="map-btn">🗺️ ניווט ל-Whoa Nellie Deli</a>
+                <a href="https://maps.google.com/?q=165+Old+Mammoth+Rd,+Mammoth+Lakes,+CA" target="_blank" class="map-btn">🗺️ ניווט לדירה בממוט לייקס</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ה' -->
+    <div class="part-header">🌵 חלק ה': עמק המוות ולאס וגאס (25.9 – 27.9)</div>
+
+    <!-- יום 9 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 9: חציית עמק המוות (Death Valley) ללאס וגאס</h2>
+            <span class="date">25.9 (יום ה')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כ-5.5 שעות נסיעה</span>
+                <span class="tag food">🥖 Erick Schat's Bakkery</span>
+                <span class="tag stay">🏨 Hilton Desert Retreat LV</span>
+            </div>
+            <div class="section-title">📍 דגשים ועצירות (לתדלק מלא ב-Bishop, להצטייד במים קרים!):</div>
+            <ul>
+                <li><strong>בוקר בממוט / בישופ:</strong> אופציה לרכבל בממוט או הליכה ב-Devils Postpile. עצירת מאפים הולנדיים ב-Erick Schat's Bakkery בעיר Bishop.</li>
+                <li><strong>עמק המוות:</strong> שלט הכניסה לפארק, דיונות החול של Mesquite Flat, מרכז המבקרים Furnace Creek (מד החום המפורסם), ותצפית משטחי המלח ב-Badwater Basin.</li>
+                <li><strong>ערב בלאס וגאס:</strong> הגעה למלון, תמונה בשלט "Welcome to Las Vegas", ומזרקות הבלאג'יו המוארות.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Erick+Schat%27s+Bakkery+Bishop+CA" target="_blank" class="map-btn">🗺️ ניווט למאפייה בבישופ</a>
+                <a href="https://maps.google.com/?q=Mesquite+Flat+Sand+Dunes" target="_blank" class="map-btn">🗺️ ניווט לדיונות עמק המוות</a>
+                <a href="https://maps.google.com/?q=Welcome+to+Fabulous+Las+Vegas+Sign" target="_blank" class="map-btn">🗺️ ניווט לשלט של וגאס</a>
+                <a href="https://maps.google.com/?q=Hilton+Vacation+Club+Desert+Retreat+Las+Vegas" target="_blank" class="map-btn">🗺️ ניווט למלון בוגאס</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 10 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 10: לאס וגאס – אקשן, שופינג ומופעים</h2>
+            <span class="date">26.9 (יום ו')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag food">🛍️ אאוטלט ושופינג</span>
+                <span class="tag hike">🎪 מופע Cirque du Soleil</span>
+                <span class="tag stay">🏨 לאס וגאס</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>בוקר:</strong> בריכה במלון או שופינג ממוזג ב-Las Vegas South Premium Outlets.</li>
+                <li><strong>13:00 – סיור מלונות הסטריפ:</strong> התעלות במלון Venetian ורכבת ההרים במלון New York-New York.</li>
+                <li><strong>16:30:</strong> הגלגל הענק High Roller בטיילת LINQ (מומלץ בשקיעה).</li>
+                <li><strong>18:00:</strong> מופע Cirque du Soleil (Michael Jackson ONE) במלון Mandalay Bay.</li>
+                <li><strong>ערב מאוחר:</strong> המבורגר ב-In-N-Out או חוויית הניאון והאומגה ברחוב Fremont בדאונטאון.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Las+Vegas+South+Premium+Outlets" target="_blank" class="map-btn">🗺️ ניווט לאאוטלט דרום וגאס</a>
+                <a href="https://maps.google.com/?q=High+Roller+Las+Vegas" target="_blank" class="map-btn">🗺️ ניווט לגלגל High Roller</a>
+                <a href="https://maps.google.com/?q=Fremont+Street+Experience" target="_blank" class="map-btn">🗺️ ניווט לפרימונט</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ו' -->
+    <div class="part-header">🏖️ חלק ו': מדבר מוהאבי וסן דייגו (27.9 – 30.9)</div>
+
+    <!-- יום 11 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 11: מווגאס לסן דייגו דרך מוהאבי</h2>
+            <span class="date">27.9 (יום ש')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כ-5.5 שעות נסיעה</span>
+                <span class="tag food">🍬 Eddie World</span>
+                <span class="tag stay">🏡 Airbnb Morena Blvd San Diego</span>
+            </div>
+            <div class="section-title">📍 תחנות שוברות נסיעה:</div>
+            <ul>
+                <li><strong>עצירה 1 – Seven Magic Mountains:</strong> עמודי הסלעים הצבעוניים במדבר לתמונות מעולות.</li>
+                <li><strong>עצירה 2 – חנות הממתקים Eddie World (Yermo):</strong> ממלכת סוכריות, מתחם ארקייד, אוכל מהיר ושירותים מצוחצחים.</li>
+                <li><strong>עצירה 3 – Barstow Station:</strong> ארוחת צהריים בתוך קרונות רכבת היסטוריים או קפיצה ל-Tanger Outlets.</li>
+                <li><strong>ערב בסן דייגו:</strong> הגעה לדירה (3303 Morena Blvd) ותצפית שקיעה מרהיבה על האוקיינוס ב-Sunset Cliffs.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Seven+Magic+Mountains" target="_blank" class="map-btn">🗺️ ניווט לשבעת ההרים</a>
+                <a href="https://maps.google.com/?q=EddieWorld+Yermo" target="_blank" class="map-btn">🗺️ ניווט ל-Eddie World</a>
+                <a href="https://maps.google.com/?q=Sunset+Cliffs+Natural+Park" target="_blank" class="map-btn">🗺️ ניווט ל-Sunset Cliffs</a>
+                <a href="https://maps.google.com/?q=3303+Morena+Boulevard,+San+Diego,+CA" target="_blank" class="map-btn">🗺️ ניווט לדירה בסן דייגו</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 12 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 12: ספארי סן דייגו ושופינג / Gaslamp</h2>
+            <span class="date">28.9 (יום א')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🦒 San Diego Zoo Safari Park</span>
+                <span class="tag food">🛍️ אאוטלט קרלסבד או רובע פנסי הגז</span>
+                <span class="tag stay">🏡 סן דייגו</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>בוקר וצהריים – Safari Park (Escondido):</strong> סיור בקרוניות ספארי בין פילים, ג'ירפות וקרנפים בשטחים פתוחים ענקיים.</li>
+                <li><strong>אחה"צ – בחירה:</strong> שופינג פתוח ב-Carlsbad Premium Outlets או חזרה למנוחה ומקלחת בדירה.</li>
+                <li><strong>ערב:</strong> בילוי משפחתי וארוחת ערב ברובע ההיסטורי <strong>Gaslamp Quarter</strong> בדאונטאון.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=San+Diego+Zoo+Safari+Park" target="_blank" class="map-btn">🗺️ ניווט לספארי פארק</a>
+                <a href="https://maps.google.com/?q=Carlsbad+Premium+Outlets" target="_blank" class="map-btn">🗺️ ניווט לאאוטלט קרלסבד</a>
+                <a href="https://maps.google.com/?q=Gaslamp+Quarter+San+Diego" target="_blank" class="map-btn">🗺️ ניווט לרובע Gaslamp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 13 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 13: אריות ים בלה הויה ונושאת המטוסים USS Midway</h2>
+            <span class="date">29.9 (יום ב')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🦭 La Jolla Cove</span>
+                <span class="tag hike">🚢 USS Midway Museum</span>
+                <span class="tag stay">🏡 סן דייגו</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>בוקר – La Jolla Cove:</strong> צפייה חופשית באריות וכלבי ים הרובצים על החוף והסלעים.</li>
+                <li><strong>צהריים – מוזיאון USS Midway:</strong> סיור מרתק בנושאת המטוסים האגדית (תאי טייס, סיפוני המראה וגשר הפיקוד).</li>
+                <li><strong>אחה"צ:</strong> טיול רגוע וגלידה במתחם החנויות Seaport Village שעל המים.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=La+Jolla+Cove" target="_blank" class="map-btn">🗺️ ניווט למפרץ לה הויה</a>
+                <a href="https://maps.google.com/?q=USS+Midway+Museum" target="_blank" class="map-btn">🗺️ ניווט לנושאת המטוסים</a>
+                <a href="https://maps.google.com/?q=Seaport+Village+San+Diego" target="_blank" class="map-btn">🗺️ ניווט ל-Seaport Village</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלק ז' -->
+    <div class="part-header">🎬 חלק ז': לוס אנג'לס, סרטים ואולפנים (30.9 – 5.10)</div>
+
+    <!-- יום 14 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 14: מסן דייגו ל-LA, הוליווד ומצפה גריפית'</h2>
+            <span class="date">30.9 (יום ג')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag drive">🚗 כשעתיים וחצי נסיעה</span>
+                <span class="tag stay">🏡 Studio City Villa (4073 Kraft Ave)</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>צהריים:</strong> נסיעה צפונה והתמקמות בווילה בשכונת Studio City (ליד יוניברסל).</li>
+                <li><strong>15:30:</strong> שדרת הכוכבים של הוליווד, התיאטרון הסיני ותצפית על שלט Hollywood ממתחם Ovation.</li>
+                <li><strong>18:00 – Griffith Observatory:</strong> תצפית שקיעה פנורמית על לוס אנג'לס וביקור במצפה.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=4073+Kraft+Avenue,+Los+Angeles,+CA" target="_blank" class="map-btn">🗺️ ניווט לווילה בסטודיו סיטי</a>
+                <a href="https://maps.google.com/?q=Hollywood+Walk+of+Fame" target="_blank" class="map-btn">🗺️ ניווט לשדרת הכוכבים</a>
+                <a href="https://maps.google.com/?q=Griffith+Observatory" target="_blank" class="map-btn">🗺️ ניווט למצפה גריפית'</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 15 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 15: יוניברסל סטודיוס הוליווד (Universal Studios)</h2>
+            <span class="date">1.10 (יום ד')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">⚡ עולם הארי פוטר & מריו</span>
+                <span class="tag food">🍔 Universal CityWalk</span>
+                <span class="tag stay">🏡 סטודיו סיטי</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>08:30 – יציאה מהווילה:</strong> נסיעה של 8 דקות בלבד לחניון הפארק.</li>
+                <li><strong>09:00-19:00 – יום מלא ביוניברסל:</strong> עולם הארי פוטר, Super Nintendo World, עולם היורה וסיור האולפנים (Studio Tour) המפורסם.</li>
+                <li><strong>ערב:</strong> ארוחת ערב בטיילת CityWalk מחוץ לשערים.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Universal+Studios+Hollywood" target="_blank" class="map-btn">🗺️ ניווט ליוניברסל סטודיוס</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 16 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 16: יום שני ביוניברסל / בוורלי הילס & The Grove</h2>
+            <span class="date">2.10 (יום ה')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag food">🛍️ שופינג ושוק איכרים</span>
+                <span class="tag stay">🏡 סטודיו סיטי</span>
+            </div>
+            <div class="section-title">📍 שתי אפשרויות לבחירה:</div>
+            <ul>
+                <li><strong>אופציה א':</strong> חצי יום שני בחינם ביוניברסל להשלמת מתקנים פופולריים.</li>
+                <li><strong>אופציה ב':</strong> טיול יוקרתי ב-Rodeo Drive בבוורלי הילס, ארוחת צהריים בשוק האיכרים ההיסטורי (The Original Farmers Market) ושופינג במתחם The Grove.</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Rodeo+Drive+Beverly+Hills" target="_blank" class="map-btn">🗺️ ניווט לרודיאו דרייב</a>
+                <a href="https://maps.google.com/?q=The+Original+Farmers+Market+Los+Angeles" target="_blank" class="map-btn">🗺️ ניווט לשוק האיכרים & The Grove</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 17 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 17: חופי לוס אנג'לס (Venice & Santa Monica)</h2>
+            <span class="date">3.10 (יום ו')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🌊 Venice Beach & Skate Park</span>
+                <span class="tag hike">🎡 רציף סנטה מוניקה</span>
+                <span class="tag stay">🏡 סטודיו סיטי</span>
+            </div>
+            <div class="section-title">📍 פירוט היום:</div>
+            <ul>
+                <li><strong>בוקר – Venice Beach:</strong> טיילת הגרפיטי, מגרשי הכדורסל, סקייטפארק החוף והאווירה הקליפורנית הקלאסית.</li>
+                <li><strong>צהריים עד שקיעה – Santa Monica Pier:</strong> רציף העץ המפורסם, פארק השעשועים Pacific Park (הגלגל הענק) וטיילת הרחוב השלישי (3rd Street Promenade).</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Venice+Beach+Boardwalk" target="_blank" class="map-btn">🗺️ ניווט לוניס ביץ'</a>
+                <a href="https://maps.google.com/?q=Santa+Monica+Pier" target="_blank" class="map-btn">🗺️ ניווט לרציף סנטה מוניקה</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- יום 18 -->
+    <div class="day-card">
+        <div class="day-header">
+            <h2>יום 18: סיור אולפני Warner Bros. והתארגנות לטיסה</h2>
+            <span class="date">4.10 (יום ש')</span>
+        </div>
+        <div class="day-content">
+            <div class="tag-group">
+                <span class="tag hike">🎬 Warner Bros. Studio Tour</span>
+                <span class="tag food">🛒 השלמת שופינג אחרונה</span>
+                <span class="tag stay">🏡 לילה אחרון בסטודיו סיטי</span>
+            </div>
+            <div class="section-title">📍 פירוט היום (חובה להזמין סיור בוקר מראש!):</div>
+            <ul>
+                <li><strong>בוקר – Warner Bros. Studio Tour:</strong> סיור מאחורי הקלעים של הסרטים הגדולים (הסטים של "חברים", "הארי פוטר", באטמן ועוד) – 10 דקות מהווילה.</li>
+                <li><strong>אחה"צ:</strong> קניות אחרונות ב-Burbank Empire Center או אריזת מזוודות ומנוחה בבריכה בווילה.</li>
+                <li><strong>5.10 (יום א'):</strong> צ'ק-אאוט, החזרת הרכב ב-LAX וטיסה חזרה הביתה!</li>
+            </ul>
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Warner+Bros.+Studio+Tour+Hollywood" target="_blank" class="map-btn">🗺️ ניווט לאולפני האחים וורנר</a>
+                <a href="https://maps.google.com/?q=Burbank+Empire+Center" target="_blank" class="map-btn">🗺️ ניווט למרכז הקניות ברבנק</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
