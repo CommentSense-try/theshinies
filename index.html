@@ -543,7 +543,504 @@
 
     <!-- חלק ז' -->
     <div class="part-header">🎬 חלק ז': לוס אנג'לס, סרטים ואולפנים (30.9 – 5.10)</div>
+<!-- כפתור לפתיחת הפופ-אפ (ניתן למקם בכל מקום באתר) -->
+<button class="la-open-btn" onclick="toggleLAPopup(true)">📍 גלה אטרקציות וחופים בלוס אנג'לס</button>
 
+<!-- מתחם הפופ-אפ -->
+<div id="laPopupModal" class="la-modal-overlay" onclick="handleLAOverlayClick(event)">
+  <div class="la-modal-content" dir="rtl">
+    
+    <!-- כותרת וכפתור סגירה -->
+    <div class="la-modal-header">
+      <h2>🌴 אטרקציות, תצפיות וחופי גלישה בלוס אנג'לס</h2>
+      <button class="la-close-btn" onclick="toggleLAPopup(false)">&times;</button>
+    </div>
+
+    <!-- גוף הפופ-אפ עם רשימת המקומות -->
+    <div class="la-modal-body">
+
+      <!-- קטגוריה: חופי גלישה והשכרה למתחילים -->
+      <div class="la-category-title">🏄‍♂️ חופי גלישה למתחילים והשכרת ציוד</div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>Will Rogers State Beach / Sunset Point (פסיפיק פליסיידס)</h3>
+          <p>החוף הנגיש והנוח ביותר מסטודיו סיטי. חניה בשפע ממש על קו המים וגלים ארוכים ומתונים במיוחד המתאימים למתחילים וחובבים.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Sunset+Point+Beach+Pacific+Palisades" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Sunset+Point+Beach+Pacific+Palisades" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>חוף סנטה מוניקה (Santa Monica Beach - Tower 26)</h3>
+          <p>קרקעית חולית רכה וגלים נוחים ללמידה. מגוון עמדות השכרה של Perry's Cafe וחנויות גלישה סמוכות.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Lifeguard+Tower+26+Santa+Monica" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Lifeguard+Tower+26+Santa+Monica" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>וניס ביץ' - אזור שובר הגלים (Venice Beach Breakwater)</h3>
+          <p>גלים מתונים ונוחים הודות לשובר הגלים. שפע חנויות השכרת ציוד גלישה וחליפות על הטיילת.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Venice+Beach+Breakwater" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Venice+Beach+Breakwater" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>אל פורטו / מנהטן ביץ' (El Porto / Manhattan Beach)</h3>
+          <p>מוקד גלישה מפורסם עם גלים עקביים על קרקע חולית, מתאים למתחילים ולגולשים מנוסים יותר.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=El+Porto+Beach+Manhattan+Beach" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=El+Porto+Beach+Manhattan+Beach" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <!-- קטגוריה: אתרים אייקוניים ותרבות -->
+      <div class="la-category-title">🏛️ אתרים אייקוניים ותרבות</div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מצפה הכוכבים גריפית' (Griffith Observatory)</h3>
+          <p>כניסה חופשית למתחם המצפה ולתצפיות מרהיבות על כל קו הרקיע של לוס אנג'לס ושלט הוליווד.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Griffith+Observatory" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Griffith+Observatory" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>שדרת הכוכבים של הוליווד (Hollywood Walk of Fame)</h3>
+          <p>הליכה לאורך המדרכות המפורסמות, איתור כוכבי הסלבריטאים וצפייה בתיאטרון הסיני של TCL.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Hollywood+Walk+of+Fame" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Hollywood+Walk+of+Fame" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>הספרייה המרכזית של לוס אנג'לס (Los Angeles Central Library)</h3>
+          <p>מבנה היסטורי מרשים בדאונטאון עם ארכיטקטורה ייחודית, תקרות מצוירות ותערוכות מתחלפות.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Los+Angeles+Central+Library" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Los+Angeles+Central+Library" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מתחם המוזיקה ו-Walt Disney Concert Hall</h3>
+          <p>סיור בגנים החיצוניים ובמבנה הנירוסטה הגלי והמפורסם שעיצב פרנק גרי.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Walt+Disney+Concert+Hall" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Walt+Disney+Concert+Hall" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מוזיאון The Broad (דאונטאון)</h3>
+          <p>מוזיאון אמנות עכשווית ברמה עולמית המציע כניסה חינם (דורש שריון כרטיס שעה מראש באתר).</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Broad+Los+Angeles" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=The+Broad+Los+Angeles" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מרכז גטי (The Getty Center)</h3>
+          <p>מתחם אמנות וגנים מרהיב בברנטווד עם תצפית פנורמית על העיר (כניסה חינם, נדרשת הזמנה מראש; חניה בתשלום).</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Getty+Center" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=The+Getty+Center" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>וילה גטי (The Getty Villa - מאליבו)</h3>
+          <p>וילה רומית משוחזרת במאליבו המוקדשת לעתיקות יוון ורומא עם גנים מטופחים (כניסה חינם בהזמנה מראש).</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Getty+Villa" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=The+Getty+Villa" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <!-- קטגוריה: חופים, טיילות ואווירה -->
+      <div class="la-category-title">🏖️ חופים, טיילות ואווירה</div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מזח סנטה מוניקה (Santa Monica Pier)</h3>
+          <p>הליכה על המזח ההיסטורי, צפייה באמני רחוב וסיום מסלול כביש 66 המפורסם.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Santa+Monica+Pier" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Santa+Monica+Pier" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>טיילת חוף וניס (Venice Beach Boardwalk)</h3>
+          <p>שיטוט לאורך החוף, צפייה במתחם השרירנים (Muscle Beach), מתחם הסקייטבורד ומופעי רחוב.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Venice+Beach+Boardwalk" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Venice+Beach+Boardwalk" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>תעלות ונציה (Venice Canals Historic District)</h3>
+          <p>הליכה פסטורלית ושקטה בין תעלות מים, גשרים ציוריים ובתי יוקרה מיוחדים.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Venice+Canals+Historic+District" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Venice+Canals+Historic+District" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>טיילת מנהטן ביץ' והמזח (Manhattan Beach Pier)</h3>
+          <p>מזח שליו עם אקווריום קטן (Roundhouse Aquarium) בסופו שהכניסה אליו חופשית.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Manhattan+Beach+Pier" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Manhattan+Beach+Pier" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>מתחם Universal CityWalk</h3>
+          <p>מדרחוב קניות, בילוי, תאורה ואווירה מחוץ לפארק יוניברסל סטודיוס (הכניסה למדרחוב חופשית).</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Universal+CityWalk+Hollywood" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Universal+CityWalk+Hollywood" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <!-- קטגוריה: טבע, מסלולים ונופים -->
+      <div class="la-category-title">🥾 טבע, מסלולים ונופים</div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>תצפית שלט הוליווד (Lake Hollywood Park)</h3>
+          <p>פארק פתוח ומסלול הליכה קל שמוביל לנקודת התצפית והצילום הקרובה ביותר לשלט הוליווד.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Lake+Hollywood+Park" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Lake+Hollywood+Park" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>פארק ראניון קניון (Runyon Canyon Park)</h3>
+          <p>מסלול הליכה בלב הוליווד עם נוף פנורמי מרהיב על המטרופולין ואווירת כושר מקומית.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Runyon+Canyon+Park" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Runyon+Canyon+Park" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>פארק אקו לייק (Echo Lake Park)</h3>
+          <p>אגם עירוני מקסים עם שבילי הליכה, צמחי לוטוס ומבט ישיר לגורדי השחקים של הדאונטאון.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Echo+Park+Lake" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Echo+Park+Lake" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>פארק שער השמיים (Kenneth Hahn Recreation Area)</h3>
+          <p>כולל את נקודת התצפית המפורסמת שמצלמת את קו הרקיע של LA כשברקע הרי סן גבריאל המושלגים בחורף.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Kenneth+Hahn+State+Recreation+Area" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Kenneth+Hahn+State+Recreation+Area" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>שמורת חוף אל מטאדור (El Matador State Beach)</h3>
+          <p>חוף ים פראי במאליבו עם מערות סלע וקשתות אבן טבעיות מרשימות לצילומים.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=El+Matador+State+Beach" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=El+Matador+State+Beach" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <!-- קטגוריה: היסטוריה, שווקים ושכונות -->
+      <div class="la-category-title">🌮 היסטוריה, שווקים ושכונות</div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>אולברה סטריט (Olvera Street)</h3>
+          <p>השוק המקסיקני ההיסטורי של לוס אנג'לס - המקום שבו נוסדה העיר, עם דוכנים, מוזיקה ואוכל אותנטי.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Olvera+Street+Los+Angeles" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Olvera+Street+Los+Angeles" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>השוק ההיסטורי המקורי (The Original Farmers Market)</h3>
+          <p>שוק אוכל ואווירה פתוח שפועל מאז שנת 1934, סמוך למרכז הקניות הפתוח The Grove.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Original+Farmers+Market+Los+Angeles" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=The+Original+Farmers+Market+Los+Angeles" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+      <div class="la-card">
+        <div class="la-card-info">
+          <h3>תצפית המגדלור ב-Point Fermin (סן פדרו)</h3>
+          <p>תצפית חופית מרהיבה על צוקים, גנים ירוקים ומגדלור היסטורי עם סיכוי לראות דולפינים ולווייתנים.</p>
+        </div>
+        <div class="la-nav-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Point+Fermin+Park+San+Pedro" target="_blank" class="nav-btn gmaps">Google Maps</a>
+          <a href="https://waze.com/ul?q=Point+Fermin+Park+San+Pedro" target="_blank" class="nav-btn waze">Waze</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- סגנון עיצוב (CSS) -->
+<style>
+  .la-open-btn {
+    background-color: #0d9488;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .la-open-btn:hover {
+    background-color: #0f766e;
+    transform: translateY(-2px);
+  }
+
+  .la-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .la-modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 820px;
+    max-height: 88vh;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: laFadeIn 0.25s ease-out;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Heebo", Arial, sans-serif;
+  }
+
+  @keyframes laFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .la-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .la-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 700;
+  }
+  .la-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #64748b;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 6px;
+  }
+  .la-close-btn:hover {
+    color: #0f172a;
+  }
+
+  .la-modal-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .la-category-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #ccfbf1;
+  }
+  .la-category-title:first-child {
+    margin-top: 0;
+  }
+
+  .la-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 16px;
+    gap: 16px;
+    transition: border-color 0.2s;
+  }
+  .la-card:hover {
+    border-color: #cbd5e1;
+    background-color: #fcfcfc;
+  }
+
+  .la-card-info {
+    flex: 1;
+  }
+  .la-card-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  .la-card-info p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.45;
+  }
+
+  .la-nav-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav-btn:hover {
+    opacity: 0.88;
+  }
+
+  .nav-btn.gmaps {
+    background-color: #ea4335;
+    color: #ffffff;
+  }
+  .nav-btn.waze {
+    background-color: #33ccff;
+    color: #083344;
+  }
+
+  @media (max-width: 640px) {
+    .la-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .la-nav-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+</style>
+
+<!-- סקריפט הפעלה (JavaScript) -->
+<script>
+  function toggleLAPopup(show) {
+    const modal = document.getElementById('laPopupModal');
+    if (modal) {
+      modal.style.display = show ? 'flex' : 'none';
+      document.body.style.overflow = show ? 'hidden' : '';
+    }
+  }
+
+  function handleLAOverlayClick(event) {
+    if (event.target.id === 'laPopupModal') {
+      toggleLAPopup(false);
+    }
+  }
+
+  // סגירה בלחיצה על מקש ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      toggleLAPopup(false);
+    }
+  });
+</script>
     <!-- יום 14 -->
     <div class="day-card">
         <div class="day-header">
